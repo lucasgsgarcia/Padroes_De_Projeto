@@ -25,12 +25,12 @@ class BancoDeDados{
     }
 }
 
-class FacadeGravarDados {
+class FacadeGravarDadosDeCSV {
     private HardDisk hd = null;
     private ReadCSVFile leitorDeCSV = null;
     private BancoDeDados bancoDeDados = null;
 
-    public FacadeGravarDados(HardDisk HD, ReadCSVFile leitorDeCSV, BancoDeDados bancoDeDados) {
+    public FacadeGravarDadosDeCSV(HardDisk HD, ReadCSVFile leitorDeCSV, BancoDeDados bancoDeDados) {
         this.hd = HD;
         this.leitorDeCSV = leitorDeCSV;
         this.bancoDeDados = bancoDeDados;
