@@ -1,5 +1,5 @@
 # Adapter - Padrão de Projeto
-A utilização do padrão Adapter promove extensibilidade para um código, possiblitando que não sejam feitas sempre manutenções nele. </br>
+A utilização do padrão Adapter promove extensibilidade para um código, possibilitando que não sejam feitas sempre manutenções nele. </br>
 Objetivo: converter a interface de uma classe em outra interface esperada pelos clientes. </br>
 Adapter permite a comunicação entre classes que não poderiam trabalhar juntas devido à incompatibilidade de suas interfaces. </br>
 
