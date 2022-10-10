@@ -9,16 +9,26 @@ public class Main {
         PSU psu = new PSU();
         MotherBoard mb = new MotherBoard();
 
-        ComputerComposite computer = new ComputerComposite("MEU PC", 5500);
-        computer.addComponent(psu);
-        computer.addComponent(mb);
-        computer.addComponent(cpu);
-        computer.addComponent(hd);
-        computer.addComponent(ram);
-        System.out.println(computer.toString());
+        ComputerComposite computerComposite = new ComputerComposite("MEU PC", 5500);
+        computerComposite.addComponent(psu);
+        computerComposite.addComponent(mb);
+        computerComposite.addComponent(cpu);
+        computerComposite.addComponent(hd);
+        computerComposite.addComponent(ram);
+        computerComposite.process();
+        System.out.println("\n\n\n\n");
 
-        for (Component c : computer.componentes) {
-            c.process();
-        }
+        Monitor monitor = new Monitor();
+        Mouse mouse = new Mouse();
+        Teclado teclado = new Teclado();
+
+
+        SetupCompletoComposite setupCompletoComposite = new SetupCompletoComposite("Meu PC Completo", computerComposite);
+        setupCompletoComposite.addPeriferico(monitor);
+        setupCompletoComposite.addPeriferico(mouse);
+        setupCompletoComposite.addPeriferico(teclado);
+        setupCompletoComposite.process();
+
+
     }
 }

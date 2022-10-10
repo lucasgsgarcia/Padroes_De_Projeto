@@ -39,3 +39,24 @@ class MotherBoard implements Component{
     }
 }
 
+class Monitor implements Component{
+    @Override
+    public void process() {
+        System.out.println("Exibindo dados.");
+    }
+}
+
+class Teclado implements Component{
+    @Override
+    public void process() {
+        System.out.println("Capturando movimentos físicos das teclas.");
+    }
+}
+
+class Mouse implements Component{
+    @Override
+    public void process() {
+        System.out.println("Capturando movimentos em coordenadas X e Y.");
+    }
+}
+

@@ -3,6 +3,34 @@ package src;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+class SetupCompletoComposite implements Component{
+
+    List<Component> perifericos;
+
+    String nome;
+    ComputerComposite pc;
+
+    public SetupCompletoComposite(String nome, ComputerComposite pc) {
+        this.nome = nome;
+        this.pc = pc;
+        perifericos = new ArrayList<>();
+    }
+
+    @Override
+    public void process() {
+        pc.process();
+        for (Component c : perifericos){
+            c.process();
+        }
+    }
+
+    public void addPeriferico(Component componente){
+        perifericos.add(componente);
+    }
+}
+
 class ComputerComposite implements Component{
 
     List<Component> componentes;
@@ -19,6 +47,9 @@ class ComputerComposite implements Component{
     @Override
     public void process() {
         System.out.println("Interligando funcionalidades dos componentes...");
+        for (Component c : componentes) {
+            c.process();
+        }
     }
 
     public void addComponent(Component componente){
